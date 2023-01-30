@@ -40,7 +40,7 @@ $ ./nginx -s reload
 ajax.open('GET','/car?move=left',true);
 ```
 ##### &emsp;2.服务端
-&emsp;&emsp;服务端用socket接收来自网页的请求，处理后发送给小车。直接运行python文件即可。
+&emsp;&emsp;服务端用socket接收来自网页的请求，处理后发送给小车。测试环境为python3.8，使用的都是原生的库，没有的话pip install安装即可，然后直接运行python文件。
 ```
 $ python server.py
 ```
