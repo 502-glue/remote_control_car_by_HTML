@@ -10,7 +10,6 @@ PORT = 5000        # 网页要绑定的端口
 ESP32_PORT = 5001  # esp32要绑定的端口
 
 esp32IsLink = False
-timerIsOn = False
 
 
 def _async_raise(tid, exctype):
