@@ -18,7 +18,7 @@ ajax.open('GET','http://localhost:端口号?move=left',true);
 ajax.send();
 ```
 
-&emsp;&emsp;实操时发现的问题：服务器设置为https协议，试图给服务器发送http协议浏览器会因为安全机制报错而发送失败（http基于UDP协议，只管发送，不管结果；https是http的安全版本，基于TCP，数据发送要经过三次握手保证连接安全可靠。如果改为发送https请求，后端则因为数据加密而读取到乱码。
+&emsp;&emsp;实操时发现的问题：服务器设置为https协议，试图给服务器发送http协议浏览器会因为安全机制报错而发送失败（http基于UDP协议，只管发送，不管结果；https是http的安全版本，基于TCP，数据发送要经过三次握手保证连接安全可靠）如果改为发送https请求，后端则因为数据加密而读取到乱码。
 
 &emsp;&emsp;解决方法：通过服务器设置nginx代理，将https请求代理到http即可。
 在nginx.conf中server{}里添加：
